@@ -1,6 +1,6 @@
 import Foundation
 
-let CHUNK_DEFAULT_BUFFER_SIZE:Int = 1024
+public let CHUNK_DEFAULT_BUFFER_SIZE:Int = 1024
 
 public enum FileChunkerError:Error
 {
@@ -84,7 +84,7 @@ public class FileChunker
 
 extension URL
 {
-    func chunk( to outputDirectory:URL, chunkSize:Int, bufferSize:Int = CHUNK_DEFAULT_BUFFER_SIZE )throws->[URL]
+    public func chunk( to outputDirectory:URL, chunkSize:Int, bufferSize:Int = CHUNK_DEFAULT_BUFFER_SIZE )throws->[URL]
     {
         let chunker:FileChunker = .init(input:self, outputDirectory:outputDirectory, chunkSize:chunkSize, bufferSize:bufferSize )
         return try chunker.chunk( )
