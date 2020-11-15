@@ -5,15 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "Chunky",
+    platforms: [
+        .iOS( "13.4" ),
+        .macOS( "10.15.4" )
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Chunky",
             targets: ["Chunky"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
